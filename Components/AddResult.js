@@ -18,5 +18,8 @@ router.post("/search",async(req,res)=>{
     res.json(data)
 })
 
-
+router.get("/view",async(req,res)=>{
+    let data=await resultModel.find()
+    res.json(data)
+})
 module.exports=router
